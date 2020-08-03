@@ -74,7 +74,7 @@ Diogo Braz - [@Diogo Braz](https://www.facebook.com/diogo67/) - diogo.braz47@out
 
 Gustavo Souza - Gustavo Souza - Gustavo.silva1405@etec.sp.gov.br - [https://github.com/GuztaJF-DS](https://github.com/GuztaJF-DS)
 
-Gustavo Vieira - [@Gustavo Vieira](https://www.facebook.com/gustavo.vieiradelacruz.9) - sprungsumobr@gmail.com - [https://github.com/sprungsumobr](https://github.com/sprungsumob
+Gustavo Vieira - [@Gustavo Vieira](https://www.facebook.com/gustavo.vieiradelacruz.9) - sprungsumobr@gmail.com - [https://github.com/sprungsumobr](https://github.com/sprungsumob)
 
 Henrique Martins - [@Henrique Martins](https://www.facebook.com/profile.php?id=100004602799158) – hmartins224@gmail.com - [https://github.com/hmartiins/](https://github.com/hmartiins/)
 
