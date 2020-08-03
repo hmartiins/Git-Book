@@ -68,11 +68,11 @@ $ yarn run start
 
 Carlos Augusto - [@Carlos Augusto](https://www.facebook.com/profile.php?id=100014122862127) - pcarlosc0@gmail.com - [https://github.com/oAugust](https://github.com/oAugust)
 
-Daniel Torquato - [@Daniel Torquato](https://www.facebook.com/df777v) - email - [https://github.com/DRTFTv](https://github.com/DRTFTv)
+Daniel Torquato - [@Daniel Torquato](https://www.facebook.com/df777v) - dany_88filho@hotmail.com - [https://github.com/DRTFTv](https://github.com/DRTFTv)
 
 Diogo Braz - [@Diogo Braz](https://www.facebook.com/diogo67/) - diogo.braz47@outlook.com - [https://github.com/diogobraz47/](https://github.com/diogobraz47/)
 
-Gustavo Souza - Gustavo Souza - email - [https://github.com/GuztaJF-DS](https://github.com/GuztaJF-DS)
+Gustavo Souza - Gustavo Souza - Gustavo.silva1405@etec.sp.gov.br - [https://github.com/GuztaJF-DS](https://github.com/GuztaJF-DS)
 
 Gustavo Vieira - [@Gustavo Vieira](https://www.facebook.com/gustavo.vieiradelacruz.9) - sprungsumobr@gmail.com - [https://github.com/sprungsumobr](https://github.com/sprungsumob
 
