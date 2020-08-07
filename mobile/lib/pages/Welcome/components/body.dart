@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile/pages/Welcome/components/background.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -11,8 +12,17 @@ class Body extends StatelessWidget {
         children: <Widget>[
           Text(
             "Bem vindo",
-            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold, 
+              color: Colors.white,
+            )
           ),
+          SvgPicture.asset(
+            "assets/img/studyng.svg", 
+            height: size.height * 0.38,  
+          ),
+          
         ],
       ),
     );
