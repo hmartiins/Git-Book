@@ -15,8 +15,16 @@ class Body extends StatelessWidget {
             left: 0,
             child: Image.asset(
               "assets/img/main_top.png",
-              width: size.width * 0.4,
+              width: size.width * 0.38,
             )
+          ),
+          Positioned(
+            bottom: 0,
+            left: 0,
+            child: Image.asset(
+              "assets/img/main_bottom.png",
+              width: size.width * 0.23,
+            ),
           )
         ],
       ),
