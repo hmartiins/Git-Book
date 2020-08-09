@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile/components/button.dart';
+import 'package:mobile/pages/Login/login_screen.dart';
 import 'package:mobile/pages/Welcome/components/background.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -11,27 +12,32 @@ class Body extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Text(
-            "Bem vindo",
-            style: TextStyle(
-              fontSize: 26,
-              fontWeight: FontWeight.bold, 
-              color: Colors.white,
-            )
-          ),
+          Text("Bem vindo",
+              style: TextStyle(
+                fontSize: 26,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              )),
           SizedBox(height: size.height * 0.04),
           SvgPicture.asset(
-            "assets/img/studyng.svg", 
-            height: size.height * 0.38,  
+            "assets/img/studyng.svg",
+            height: size.height * 0.38,
           ),
           SizedBox(height: size.height * 0.04),
           Button(
             textButton: 'LOGIN',
-            handlePressButton: (){},
+            handlePressButton: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) {
+                  return LoginScreen();
+                }),
+              );
+            },
           ),
           Button(
             textButton: 'CADASTRE-SE',
-            handlePressButton: (){},
+            handlePressButton: () {},
           )
         ],
       ),
