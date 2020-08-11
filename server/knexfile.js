@@ -10,7 +10,7 @@ module.exports = {
       database: 'dbgs',
     },
     migrations: {
-      directory: path.resolve(__dirname, 'src', 'database', 'migrations'),
+      directory: path.resolve(__dirname, 'src', 'models', 'migrations'),
     },
     seeds: {
       directory: path.resolve(__dirname, 'src', 'database', 'seeds'),
