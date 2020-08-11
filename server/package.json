@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/hmartiins/Git-Book/issues"
   },
-  "homepage": "https://github.com/hmartiins/Git-Book#readme"
+  "homepage": "https://github.com/hmartiins/Git-Book#readme",
+  "dependencies": {
+    "knex": "^0.21.4",
+    "mysql": "^2.18.1"
+  }
 }
