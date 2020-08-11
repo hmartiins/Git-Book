@@ -1,7 +1,11 @@
 # Git's Book
 > An online library.
 
-[![NPM Version][npm-image]][npm-url]
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]]
+[![Issues][issues-shield]]
+[![MIT License][license-shield]]
 [![Build Status][travis-image]][travis-url]
 
 Aliquam consectetur felis convallis tempor aliquet. Nam vel ante ultricies, iaculis lacus a, suscipit ante. Integer erat mauris, tempor et fermentum quis, maximus at magna.
@@ -84,9 +88,12 @@ Letícia Silvério - [@Leticia Silverio](https://www.facebook.com/lele.silverio.
 
 
 <!-- Markdown link & img dfn's -->
-[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/datadog-metrics
-[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
+[contributors-shield]: https://img.shields.io/github/contributors/hmartiins/Git-Book
+[contributors-url]: https://img.shields.io/github/graphs/hmartiins/Git-Book
+[forks-shield]: https://img.shields.io/github/forks/hmartiins/Git-Book
+[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
+[stars-shield]: https://img.shields.io/github/stars/hmartiins/Git-Book
+[issues-shield]: https://img.shields.io/github/issues/hmartiins/Git-Book
+[license-shield]: https://img.shields.io/github/license/hmartiins/Git-Book
 [travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
 [travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
-[wiki]: https://github.com/yourname/yourproject/wiki
