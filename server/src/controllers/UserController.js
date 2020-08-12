@@ -38,7 +38,20 @@ class UserController {
       response.status(400).send({ error: 'Failed to register' })
     }
   }
+  async show(request, response) {
+    const { cd_user } = request.params;
 
+    const user = await knex('tb_user')
+      .where('cd_user', cd_user)
+      .first()
+      .select('name', 'email');
+
+    if (!user) {
+      return response.status(400).send({ error: 'User not found' });
+    }
+
+    return response.json({ user });
+  }
 }
 
 module.exports = UserController;
