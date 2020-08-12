@@ -8,7 +8,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/hmartiins/Git-Book">
-    <img src="docs/imagesReadme/GBVerde.png" alt="Logo" width="80" height="80">
+    <img src="docs/imagesReadme/LogoVerdeEscrita.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Git's Book</h3>
@@ -41,7 +41,7 @@
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
 This project was originally a school project on PHP. We transferred the original idea into a more up-to-date application with Node.js and React for web, plus the added mobile version (Flutter) that was not included in the original. Our group, with a few exceptions, is very new to these new technologies, so this was a way to learn and apply a lot of concepts in one single application. Furthermore, we used programmer guidelines, such as "Clean Code" and "Clean Architeture".
-.
+<br>
 The application was divided using React for the web design, Node.js for the server-side and the mobile application made with Flutter.
 
 ### Built With
