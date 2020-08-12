@@ -6,7 +6,7 @@
 [![Build Status][travis-image]][travis-url]
 
 <br />
-<p align="center">
+
   <a href="https://github.com/hmartiins/Git-Book">
     <img src="docs/imagesReadme/LogoVerdeEscrita.png" alt="Logo" width="80" height="80">
   </a>
@@ -21,7 +21,7 @@
     ·
     <a href="https://github.com/hmartiins/Git-Book/issues">Request Feature</a>
   </p>
-</p>
+
 
 ## Table of Contents
 
