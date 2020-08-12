@@ -7,11 +7,16 @@
 
 <br />
 
-  <a href="https://github.com/hmartiins/Git-Book">
-    <img src="docs/imagesReadme/LogoVerdeEscrita.png" alt="Logo" width="80" height="80">
-  </a>
-
-  <h3 align="center">Git's Book</h3>
+  <div style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  ">
+    <a href="https://github.com/hmartiins/Git-Book">
+      <img src="docs/imagesReadme/LogoVerdeEscrita.png" alt="Logo" width="80%" height="80">
+    </a>
+  </div>
 
   <p align="center">
     Online libraby application for web and mobile
@@ -22,20 +27,20 @@
     <a href="https://github.com/hmartiins/Git-Book/issues">Request Feature</a>
   </p>
 
-
 ## Table of Contents
 
-* [About the Project](#about-the-project)
-  * [Built With](#built-with)
-* [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
-* [Roadmap](#roadmap)
-* [Contributing](#contributing)
-* [License](#license)
-* [Contact](#contact)
+- [About the Project](#about-the-project)
+  - [Built With](#built-with)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
@@ -46,12 +51,13 @@ The application was divided using React for the web design, Node.js for the serv
 
 ### Built With
 
-* [JavaScript](https://www.javascript.com/)
-* [NodeJS](https://nodejs.org/en/)
-* [Flutter](https://flutter.dev/?gclsrc=aw.ds&&gclid=CjwKCAjwps75BRAcEiwAEiACMZlRpBjVUw8SySX6rWh2jdJoggUnOcYBwTBMhzbv8tsQ9NvijIbvohoCTXcQAvD_BwE)
-* [ReactJS](https://reactjs.org/)
+- [JavaScript](https://www.javascript.com/)
+- [NodeJS](https://nodejs.org/en/)
+- [Flutter](https://flutter.dev/?gclsrc=aw.ds&&gclid=CjwKCAjwps75BRAcEiwAEiACMZlRpBjVUw8SySX6rWh2jdJoggUnOcYBwTBMhzbv8tsQ9NvijIbvohoCTXcQAvD_BwE)
+- [ReactJS](https://reactjs.org/)
 
 <!-- GETTING STARTED -->
+
 ## Getting Started
 
 This is an example of how you may give instructions on setting up your project locally.
@@ -60,6 +66,7 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 
 In order to test and run this project on your machine, follow these steps:
+
 1. Have the LTS version of Node (currently version 12.17.0)
 
 #### [NodeJS](https://nodejs.org/en/)
@@ -68,14 +75,13 @@ In order to test and run this project on your machine, follow these steps:
 
 #### [Flutter Instalation Guide](https://flutter.dev/docs/get-started/install)
 
-
 ### Installation
 
 Cloning the Repository
 
 ```sh
 $ git clone https://github.com/hmartiins/Git-Book.git
-$ cd Git-Book 
+$ cd Git-Book
 ```
 
 Inside the server folder, execute:
@@ -96,14 +102,14 @@ Inside the web folder, execute:
 
 ```sh
 $ yarn install
-$ yarn start 
+$ yarn start
 ```
 
 ###### or
 
 ```sh
-$ npm install 
-$ npm start 
+$ npm install
+$ npm start
 ```
 
 Inside the mobile folder, execute:
@@ -113,11 +119,13 @@ $ flutter run
 ```
 
 <!-- ROADMAP -->
+
 ## Roadmap
 
 See the [open issues](https://github.com/hmartiins/Git-Book/issues) for a list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
+
 ## Contributing
 
 1. Fork it (<https://github.com/hmartiins/Git-Book.git>)
@@ -133,11 +141,13 @@ See the [open issues](https://github.com/hmartiins/Git-Book/issues) for a list o
 3. Say something you would like there and click on "Submit new Issue"
 
 <!-- LICENSE -->
+
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- CONTACT -->
+
 ## Contact
 
 Daniel Torquato - [@Daniel Torquato](https://www.facebook.com/df777v) - dany_88filho@hotmail.com - [https://github.com/DRTFTv](https://github.com/DRTFTv)
@@ -148,12 +158,13 @@ Henrique Martins - [@Henrique Martins](https://www.facebook.com/profile.php?id=1
 
 João Victor da Silva - [@João Victor da Silva](https://www.facebook.com/profile.php?id=100015450819596) - jv782063@gmail.com - [https://github.com/joaovds](https://github.com/joaovds)
 
-Letícia Silvério - [@Leticia Silverio](https://www.facebook.com/lele.silverio.14) - Leticia.silverio09@gmail.com - [https://github.com/devLeSilverio](https://github.com/devLeSilverio) 
+Letícia Silvério - [@Leticia Silverio](https://www.facebook.com/lele.silverio.14) - Leticia.silverio09@gmail.com - [https://github.com/devLeSilverio](https://github.com/devLeSilverio)
 
-Pedro Bertoluzzi - [@Pedro Bertoluzzi](https://www.facebook.com/pedroeduardo.bertoluzzi/) - bertoluzzi2004@gmail.com - [https://github.com/PocketLocked](https://github.com/PocketLocked) 
+Pedro Bertoluzzi - [@Pedro Bertoluzzi](https://www.facebook.com/pedroeduardo.bertoluzzi/) - bertoluzzi2004@gmail.com - [https://github.com/PocketLocked](https://github.com/PocketLocked)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
 [contributors-shield]: https://img.shields.io/github/contributors/hmartiins/Git-Book
 [contributors-url]: https://img.shields.io/github/graphs/hmartiins/Git-Book
 [forks-shield]: https://img.shields.io/github/forks/hmartiins/Git-Book
