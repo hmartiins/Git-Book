@@ -14,7 +14,7 @@
     position: relative;
   ">
     <a href="https://github.com/hmartiins/Git-Book">
-      <img src="docs/imagesReadme/LogoVerdeEscrita.png" alt="Logo" width="80%" height="80">
+      <img src="docs/imagesReadme/LogoVerdeEscrita.png" alt="Logo" width="80%">
     </a>
   </div>
 
