@@ -13,7 +13,7 @@ module.exports = {
       directory: path.resolve(__dirname, 'src', 'models', 'migrations'),
     },
     seeds: {
-      directory: path.resolve(__dirname, 'src', 'database', 'seeds'),
+      directory: path.resolve(__dirname, 'src', 'models', 'seeds'),
     },
   },
 
