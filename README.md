@@ -1,6 +1,3 @@
-# Git's Book
-> An online library.
-
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]]
@@ -8,55 +5,122 @@
 [![MIT License][license-shield]]
 [![Build Status][travis-image]][travis-url]
 
-Aliquam consectetur felis convallis tempor aliquet. Nam vel ante ultricies, iaculis lacus a, suscipit ante. Integer erat mauris, tempor et fermentum quis, maximus at magna.
+<br />
+<p align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
 
-<!-- Imagem do projeto -->
+  <h3 align="center">Git's Book</h3>
 
-## About the project
+  <p align="center">
+    Online libraby application for web and mobile
+    <br />
+    <br />
+    <a href="https://github.com/hmartiins/Git-Book/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/hmartiins/Git-Book/issues">Request Feature</a>
+  </p>
+</p>
 
-Nunc non mattis tortor, vitae euismod erat. Etiam lobortis pharetra nunc, eget maximus urna tristique eget. Ut placerat elit quis nulla tincidunt condimentum. Nam ut ipsum vulputate, egestas dui non, rhoncus orci. Sed venenatis auctor mi ut tincidunt. Phasellus lacinia ut ex et consequat. Morbi hendrerit diam eu nisi ornare finibus. Pellentesque ultricies quam id diam pellentesque tempus. Morbi sit amet nisl sit amet sem pellentesque ullamcorper. Ut vitae feugiat elit. Morbi in porta tellus. Quisque efficitur, odio at elementum suscipit, libero diam dictum ante, non congue tellus orci sit amet ipsum. Sed a felis metus. Integer odio ligula, maximus feugiat metus eu, maximus mattis augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin in vulputate lorem.
+## Table of Contents
 
-## Installation
+* [About the Project](#about-the-project)
+  * [Built With](#built-with)
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+* [Roadmap](#roadmap)
+* [Contributing](#contributing)
+* [License](#license)
+* [Contact](#contact)
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
+
+This project was originally a school project on PHP. We transferred the original idea into a more up-to-date application with Node.js and React for web, plus the added mobile version (Flutter) that was not included in the original. Our group, with a few exceptions, is very new to these new technologies, so this was a way to learn and apply a lot of concepts in one single application. Furthermore, we used programmer guidelines, such as "Clean Code" and "Clean Architeture".
+.
+The application was divided using React for the web design, Node.js for the server-side and the mobile application made with Flutter.
+
+### Built With
+
+* [JavaScript](https://www.javascript.com/)
+* [NodeJS](https://nodejs.org/en/)
+* [Flutter](https://flutter.dev/?gclsrc=aw.ds&&gclid=CjwKCAjwps75BRAcEiwAEiACMZlRpBjVUw8SySX6rWh2jdJoggUnOcYBwTBMhzbv8tsQ9NvijIbvohoCTXcQAvD_BwE)
+* [ReactJS](https://reactjs.org/)
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+In order to test and run this project on your machine, follow these steps:
+1. Have the LTS version of Node (currently version 12.17.0)
+
+#### [NodeJS](https://nodejs.org/en/)
+
+2. To have Flutter installed on your machine, follow the guidelines for your operating system
+
+#### [Flutter Instalation Guide](https://flutter.dev/docs/get-started/install)
+
+
+### Installation
 
 Cloning the Repository
 
 ```sh
 $ git clone https://github.com/hmartiins/Git-Book.git
-$ cd Git-Book  
+$ cd Git-Book 
 ```
 
-Inside the backend folder, execute:
+Inside the server folder, execute:
 
 ```sh
-$  yarn 
-$  node src/index.js 
+$ yarn install
+$ yarn start
 ```
 
 ###### or
 
 ```sh
-$ npm install 
-$ node src/index.js 
+$ npm install
+$ npm start
 ```
 
 Inside the web folder, execute:
 
 ```sh
 $ yarn install
-$ yarn run start 
+$ yarn start 
 ```
 
 ###### or
 
 ```sh
-$ yarn install 
-$ yarn run start 
+$ npm install 
+$ npm start 
 ```
 
+Inside the mobile folder, execute:
 
+```sh
+$ flutter run
+```
+
+<!-- ROADMAP -->
+## Roadmap
+
+See the [open issues](https://github.com/hmartiins/Git-Book/issues) for a list of proposed features (and known issues).
+
+<!-- CONTRIBUTING -->
 ## Contributing
 
-1. Fork it (<https://github.com/hmartiins/Git-Book>)
+1. Fork it (<https://github.com/hmartiins/Git-Book.git>)
 2. Create your feature branch (`git checkout -b feature/...`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin feature/...`)
@@ -68,15 +132,15 @@ $ yarn run start
 2. Create a new issue
 3. Say something you would like there and click on "Submit new Issue"
 
-## Meta
+<!-- LICENSE -->
+## License
 
-Carlos Augusto - [@Carlos Augusto](https://www.facebook.com/profile.php?id=100014122862127) - pcarlosc0@gmail.com - [https://github.com/oAugust](https://github.com/oAugust)
+Distributed under the MIT License. See `LICENSE` for more information.
+
+<!-- CONTACT -->
+## Contact
 
 Daniel Torquato - [@Daniel Torquato](https://www.facebook.com/df777v) - dany_88filho@hotmail.com - [https://github.com/DRTFTv](https://github.com/DRTFTv)
-
-Diogo Braz - [@Diogo Braz](https://www.facebook.com/diogo67/) - diogo.braz47@outlook.com - [https://github.com/diogobraz47/](https://github.com/diogobraz47/)
-
-Gustavo Souza - Gustavo Souza - Gustavo.silva1405@etec.sp.gov.br - [https://github.com/GuztaJF-DS](https://github.com/GuztaJF-DS)
 
 Gustavo Vieira - [@Gustavo Vieira](https://www.facebook.com/gustavo.vieiradelacruz.9) - sprungsumobr@gmail.com - [https://github.com/sprungsumobr](https://github.com/sprungsumob)
 
@@ -86,8 +150,10 @@ João Victor da Silva - [@João Victor da Silva](https://www.facebook.com/profil
 
 Letícia Silvério - [@Leticia Silverio](https://www.facebook.com/lele.silverio.14) - Leticia.silverio09@gmail.com - [https://github.com/devLeSilverio](https://github.com/devLeSilverio) 
 
+Pedro Bertoluzzi - [@Pedro Bertoluzzi](https://www.facebook.com/pedroeduardo.bertoluzzi/) - bertoluzzi2004@gmail.com - [https://github.com/PocketLocked](https://github.com/PocketLocked) 
 
-<!-- Markdown link & img dfn's -->
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/hmartiins/Git-Book
 [contributors-url]: https://img.shields.io/github/graphs/hmartiins/Git-Book
 [forks-shield]: https://img.shields.io/github/forks/hmartiins/Git-Book
