@@ -1,5 +1,6 @@
 exports.up = (knex) =>
 	knex.schema.createTable('tb_adress', (table) => {
+
 		table.increments('cd_adress');
 
 		table.string('cep', 20).notNullable();
