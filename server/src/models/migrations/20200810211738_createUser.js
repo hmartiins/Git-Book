@@ -12,4 +12,5 @@ exports.up = (knex) =>
     table.string('rg', 45).notNullable().unique();
   });
 
+
 exports.down = (knex) => knex.schema.dropTable('tb_user');
