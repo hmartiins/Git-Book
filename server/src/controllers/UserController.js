@@ -1,4 +1,3 @@
-const { request, response } = require('express');
 const knex = require('../models/connection');
 
 class UserController {
@@ -51,6 +50,30 @@ class UserController {
     }
 
     return response.json({ user });
+  }
+  async delete(request, response) {
+    const { cd_user } = request.params;
+
+    try {
+      const userVerification = await knex('tb_user')
+        .where('cd_user', cd_user)
+        .first()
+        .select('cd_user');
+
+      if (!userVerification) {
+        return response.status(400).send({ error: 'User not found' });
+      }
+
+      await knex('tb_user')
+        .where('cd_user', cd_user)
+        .delete()
+
+      return response.sendStatus(200).send({
+        success: `successfully deleting the user with id ${cd_user}`
+      });
+    } catch (err) {
+
+    }
   }
 }
 
