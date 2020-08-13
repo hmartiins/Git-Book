@@ -1,5 +1,17 @@
 const knex = require('../models/connection');
 
+async function userVerifications(cd_user) {
+  const userVerification = await knex('tb_user')
+    .where('cd_user', cd_user)
+    .first()
+    .select('cd_user');
+
+  if (!userVerification) {
+    return false;
+  }
+
+  return true;
+}
 class UserController {
   async create(request, response) {
     const {
@@ -40,28 +52,28 @@ class UserController {
   async show(request, response) {
     const { cd_user } = request.params;
 
+    let userVerification = await userVerifications(cd_user);
+
+    if (userVerification === false) {
+      return response.status(404).send({ success: 'User not found' })
+    }
+
     const user = await knex('tb_user')
       .where('cd_user', cd_user)
       .first()
       .select('name', 'email');
 
-    if (!user) {
-      return response.status(400).send({ error: 'User not found' });
-    }
-
     return response.json({ user });
   }
   async delete(request, response) {
     const { cd_user } = request.params;
+    let userVerification;
 
     try {
-      const userVerification = await knex('tb_user')
-        .where('cd_user', cd_user)
-        .first()
-        .select('cd_user');
+      userVerification = await userVerifications(cd_user);
 
-      if (!userVerification) {
-        return response.status(400).send({ error: 'User not found' });
+      if (userVerification === false) {
+        return response.status(404).send({ success: 'User not found' })
       }
 
       await knex('tb_user')
@@ -72,13 +84,14 @@ class UserController {
         success: `successfully deleting the user with id ${cd_user}`
       });
     } catch (err) {
-      console.log(err)
+      console.log(err);
 
-      return response.status(400).send({ error: 'error when deleting the record' })
+      return response.status(400).send({ error: 'error when deleting the record' });
     }
   }
   async update(request, response) {
     const { cd_user } = request.params
+    let userVerification;
 
     const {
       name,
@@ -87,13 +100,10 @@ class UserController {
     } = request.body
 
     try {
-      const userVerification = await knex('tb_user')
-        .where('cd_user', cd_user)
-        .first()
-        .select('cd_user')
+      userVerification = await userVerifications(cd_user);
 
-      if (!userVerification) {
-        return response.status(400).send({ success: 'User not found' })
+      if (userVerification === false) {
+        return response.status(404).send({ success: 'User not found' })
       }
 
       await knex('tb_user').update({
@@ -102,10 +112,10 @@ class UserController {
         password
       }).where({ cd_user });
 
-      return response.status(200).send({ ok: 'Updated successfully' })
+      return response.status(200).send({ success: 'Updated successfully' });
     } catch (err) {
-      console.log(err)
-      response.status(400).send({ error: 'Failed to update' })
+      console.log(err);
+      response.status(400).send({ error: 'Failed to update' });
     }
   }
 }
