@@ -29,6 +29,7 @@
   font-size: 18px;
   font-weight: lighter;
   color: #c1baba;
+  outline-style: none;
   transition: 0.7s;
 }
 
