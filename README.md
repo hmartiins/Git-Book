@@ -1,9 +1,9 @@
 [![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]]
-[![Issues][issues-shield]]
-[![MIT License][license-shield]]
+![Issues][issues-shield]
+![MIT License][license-shield]
 [![Build Status][travis-image]][travis-url]
+[![Forks][forks-shield]][forks-url]
+![Stargazers][stars-shield]
 
 <br />
 
@@ -151,15 +151,15 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 
 Daniel Torquato - [@Daniel Torquato](https://www.facebook.com/df777v) - dany_88filho@hotmail.com - [https://github.com/DRTFTv](https://github.com/DRTFTv)
-
+* * *
 Gustavo Vieira - [@Gustavo Vieira](https://www.facebook.com/gustavo.vieiradelacruz.9) - sprungsumobr@gmail.com - [https://github.com/sprungsumobr](https://github.com/sprungsumob)
-
+* * *
 Henrique Martins - [@Henrique Martins](https://www.facebook.com/profile.php?id=100004602799158) – hmartins224@gmail.com - [https://github.com/hmartiins/](https://github.com/hmartiins/)
-
+* * *
 João Victor da Silva - [@João Victor da Silva](https://www.facebook.com/profile.php?id=100015450819596) - jv782063@gmail.com - [https://github.com/joaovds](https://github.com/joaovds)
-
+* * *
 Letícia Silvério - [@Leticia Silverio](https://www.facebook.com/lele.silverio.14) - Leticia.silverio09@gmail.com - [https://github.com/devLeSilverio](https://github.com/devLeSilverio)
-
+* * *
 Pedro Bertoluzzi - [@Pedro Bertoluzzi](https://www.facebook.com/pedroeduardo.bertoluzzi/) - bertoluzzi2004@gmail.com - [https://github.com/PocketLocked](https://github.com/PocketLocked)
 
 <!-- MARKDOWN LINKS & IMAGES -->
