@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:mobile/components/button.dart';
 import 'package:mobile/components/input_field.dart';
 import 'package:mobile/components/password_field.dart';
 import 'package:mobile/pages/Login/components/background.dart';
@@ -36,6 +37,10 @@ class Body extends StatelessWidget {
           PasswordField(
             onChanged: (vl) {},
           ),
+          Button(
+            textButton: "LOGIN",
+            handlePressButton: () {},
+          )
         ],
       ),
     );
