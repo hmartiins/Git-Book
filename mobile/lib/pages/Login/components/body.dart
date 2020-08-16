@@ -19,6 +19,9 @@ class Body extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
+          SizedBox(
+            height: size.height * 0.02,
+          ),
           Text(
             "LOGIN",
             style: TextStyle(
@@ -26,6 +29,9 @@ class Body extends StatelessWidget {
               color: Colors.white,
               fontSize: 26,
             ),
+          ),
+          SizedBox(
+            height: size.height * 0.04,
           ),
           SvgPicture.asset(
             "assets/img/loginAsset.svg",
