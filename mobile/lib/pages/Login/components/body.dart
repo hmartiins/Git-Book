@@ -3,6 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mobile/components/button.dart';
 import 'package:mobile/components/input_field.dart';
 import 'package:mobile/components/password_field.dart';
+import 'package:mobile/components/text_account_check.dart';
+import 'package:mobile/constants.dart';
 import 'package:mobile/pages/Login/components/background.dart';
 
 class Body extends StatelessWidget {
@@ -27,7 +29,7 @@ class Body extends StatelessWidget {
           ),
           SvgPicture.asset(
             "assets/img/loginAsset.svg",
-            height: size.height * 0.38,
+            height: size.height * 0.34,
           ),
           InputField(
             hintText: "Email",
@@ -40,7 +42,8 @@ class Body extends StatelessWidget {
           Button(
             textButton: "LOGIN",
             handlePressButton: () {},
-          )
+          ),
+          TextAccountCheck()
         ],
       ),
     );

@@ -29,7 +29,7 @@ class Background extends StatelessWidget {
             right: 0,
             child: Image.asset(
               "assets/img/login_bottom.png",
-              width: size.width * 0.6,
+              width: size.width * 0.33,
             ),
           ),
           child,
