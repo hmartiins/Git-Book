@@ -1,4 +1,7 @@
+const md5 = require('md5');
+
 const knex = require('../models/connection');
+const config = require('../config/config');
 
 async function userVerifications(cd_user) {
   const userVerification = await knex('tb_user')
@@ -24,10 +27,12 @@ class UserController {
       rg
     } = request.body;
 
+    const encryptedPassword = md5(name + config.md5HashKey);
+
     const user = {
       name,
       email,
-      password,
+      password: encryptedPassword,
       birth,
       telephone,
       cpf,
