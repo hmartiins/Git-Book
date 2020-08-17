@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:mobile/components/button.dart';
 import 'package:mobile/components/input_field.dart';
-import 'package:mobile/components/text_field_container.dart';
+import 'package:mobile/components/password_field.dart';
+import 'package:mobile/components/text_account_check.dart';
+import 'package:mobile/constants.dart';
 import 'package:mobile/pages/Login/components/background.dart';
 
 class Body extends StatelessWidget {
@@ -16,6 +19,9 @@ class Body extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
+          SizedBox(
+            height: size.height * 0.02,
+          ),
           Text(
             "LOGIN",
             style: TextStyle(
@@ -24,15 +30,26 @@ class Body extends StatelessWidget {
               fontSize: 26,
             ),
           ),
+          SizedBox(
+            height: size.height * 0.04,
+          ),
           SvgPicture.asset(
             "assets/img/loginAsset.svg",
-            height: size.height * 0.38,
+            height: size.height * 0.34,
           ),
           InputField(
             hintText: "Email",
             icon: Icons.email,
             onChanged: (vl) {},
           ),
+          PasswordField(
+            onChanged: (vl) {},
+          ),
+          Button(
+            textButton: "LOGIN",
+            handlePressButton: () {},
+          ),
+          TextAccountCheck()
         ],
       ),
     );
