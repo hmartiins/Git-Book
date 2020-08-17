@@ -1,5 +1,5 @@
 import React from 'react';
-import Input from '../../components/Input/index'
+import {Input} from '../../components/Input/index'
 
 export default function Login() {
   return (
