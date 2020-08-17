@@ -5,7 +5,7 @@ export default function Footer(props) {
     return (
       <div className={styles.inputGroup}>
         <label for={props.name}>
-          {props.label}
+          {!props.label ? null : props.label}
           {props.mandatory ? <span>*</span> : null}
         </label>
         <input
