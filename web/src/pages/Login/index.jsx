@@ -10,6 +10,7 @@ export default function Login() {
         mandatory={true}
         type="text"
         placeholder="Nome Completo"
+        width="470px"
       />
       <Input 
         name="email"
@@ -17,6 +18,7 @@ export default function Login() {
         mandatory={true}
         type="email"
         placeholder="seu@email.com"
+        width="470px"
       />
     </>
   );

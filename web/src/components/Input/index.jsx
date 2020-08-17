@@ -2,6 +2,9 @@ import React from 'react'
 import styles from './styles.module.css';
 
 export default function Footer(props) {
+  const style = {
+    width: props.width
+  }
     return (
       <div className={styles.inputGroup}>
         <label for={props.name}>
@@ -12,6 +15,7 @@ export default function Footer(props) {
           type={props.type}
           name={props.name}
           placeholder={props.placeholder}
+          style={style}
         />
       </div>
     );
