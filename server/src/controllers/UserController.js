@@ -1,4 +1,8 @@
+const md5 = require('md5');
+
 const knex = require('../models/connection');
+const config = require('../config/config');
+const emailService = require('../services/emailServices');
 
 async function userVerifications(cd_user) {
   const userVerification = await knex('tb_user')
@@ -24,10 +28,12 @@ class UserController {
       rg
     } = request.body;
 
+    const encryptedPassword = md5(password + config.md5HashKey);
+
     const user = {
       name,
       email,
-      password,
+      password: encryptedPassword,
       birth,
       telephone,
       cpf,
@@ -39,6 +45,14 @@ class UserController {
     try {
       await trx('tb_user').insert(user);
       await trx.commit();
+
+      emailService.sendEmail(
+        email,
+        'gitsbooks@gmail.com',
+        'Bem vindo ao git-book',
+        `Olá ${name}, bem vindo ao Git-Book`,
+        `Olá <strong>${name}</strong>, bem vindo ao Git-Book`,
+      );
 
       return response.status(201).json({
         succes: 'Registered successfully',
