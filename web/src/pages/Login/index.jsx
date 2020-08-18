@@ -11,13 +11,28 @@ export default function Login() {
         type="text"
         placeholder="Nome Completo"
       />
-      <Input 
+      <Input
         name="email"
         label="E-mail"
         mandatory={true}
         type="email"
         placeholder="seu@email.com"
       />
+      <Input
+        name="senha"
+        label="Senha"
+        mandatory={true}
+        type="password"
+        placeholder="pelo menos 6 caracteres"
+      />
+      <Input
+        name="confirmsenha"
+        label="Insira a senha novamente"
+        mandatory={true}
+        type="password"
+        placeholder="confirme sua senha"
+      />
+
     </>
   );
 }
