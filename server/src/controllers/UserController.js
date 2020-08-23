@@ -4,26 +4,13 @@ const knex = require('../models/connection');
 const config = require('../config/config');
 const emailService = require('../services/emailServices');
 
-async function userVerifications(cd_user) {
-  const userVerification = await knex('tb_user')
-    .where('cd_user', cd_user)
+async function checkField(colum, field) {
+  const fieldVerification = await knex('tb_user')
+    .where(colum, field)
     .first()
-    .select('cd_user');
+    .select(colum)
 
-  if (!userVerification) {
-    return false;
-  };
-
-  return true;
-};
-
-async function emailExisting(email) {
-  const emailVerification = await knex('tb_user')
-    .where('email', email)
-    .first()
-    .select('email');
-
-  if (!emailVerification) {
+  if (!fieldVerification) {
     return false;
   };
 
@@ -56,7 +43,7 @@ class UserController {
 
     const trx = await knex.transaction();
 
-    const userEmailExisting = await emailExisting(email);
+    const userEmailExisting = await checkField('email', email);
 
     if (userEmailExisting === true) {
       return response.status(409).send({ error: 'E-mail already registered !' })
@@ -86,7 +73,7 @@ class UserController {
   async show(request, response) {
     const { cd_user } = request.params;
 
-    let userVerification = await userVerifications(cd_user);
+    let userVerification = await checkField('cd_user', cd_user);
 
     if (userVerification === false) {
       return response.status(404).send({ success: 'User not found' })
@@ -104,7 +91,7 @@ class UserController {
     let userVerification;
 
     try {
-      userVerification = await userVerifications(cd_user);
+      userVerification = await checkField('cd_user', cd_user);
 
       if (userVerification === false) {
         return response.status(404).send({ success: 'User not found' })
@@ -134,7 +121,7 @@ class UserController {
     } = request.body
 
     try {
-      userVerification = await userVerifications(cd_user);
+      userVerification = await checkField('cd_user', cd_user);
 
       if (userVerification === false) {
         return response.status(404).send({ success: 'User not found' })
