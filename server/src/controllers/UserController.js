@@ -12,10 +12,24 @@ async function userVerifications(cd_user) {
 
   if (!userVerification) {
     return false;
-  }
+  };
 
   return true;
-}
+};
+
+async function emailExisting(email) {
+  const emailVerification = await knex('tb_user')
+    .where('email', email)
+    .first()
+    .select('email');
+
+  if (!emailVerification) {
+    return false;
+  };
+
+  return true;
+};
+
 class UserController {
   async create(request, response) {
     const {
@@ -41,6 +55,12 @@ class UserController {
     }
 
     const trx = await knex.transaction();
+
+    const userEmailExisting = await emailExisting(email);
+
+    if (userEmailExisting === true) {
+      return response.status(409).send({ error: 'E-mail already registered !' })
+    }
 
     try {
       await trx('tb_user').insert(user);
