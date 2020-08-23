@@ -64,12 +64,12 @@ class UserController {
       return response.status(201).json({
         succes: 'Registered successfully',
         data: user,
-      })
+      });
     } catch (err) {
       console.log(err);
-      response.status(400).send({ error: 'Failed to register' })
-    }
-  }
+      response.status(400).send({ error: 'Failed to register' });
+    };
+  };
   async show(request, response) {
     const { cd_user } = request.params;
 
@@ -118,13 +118,13 @@ class UserController {
       name,
       email,
       password
-    } = request.body
+    } = request.body;
 
     try {
       userVerification = await checkField('cd_user', cd_user);
 
       if (userVerification === false) {
-        return response.status(404).send({ success: 'User not found' })
+        return response.status(404).send({ success: 'User not found' });
       }
 
       await knex('tb_user').update({
