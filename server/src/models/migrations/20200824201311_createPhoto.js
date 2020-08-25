@@ -3,7 +3,7 @@ exports.up = (knex) =>
 
 		table.increments('cd_photo');
 
-		table.string('name', 120).notNullable();
+		table.text('name').notNullable();
 
 		table.integer('id_book').unsigned();
 		table.foreign('id_book').references('cd_book').inTable('tb_book');

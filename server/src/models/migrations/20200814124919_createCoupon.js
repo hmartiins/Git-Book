@@ -3,7 +3,7 @@ exports.up = (knex) =>
 
 		table.increments('cd_coupon');
 
-		table.string('coupon', 60).notNullable();
+		table.string('coupon').notNullable();
 		table.date('coupon_expiration').notNullable();
 		table.date('coupon_creation').notNullable();
 		table.decimal('coupon_value').notNullable();

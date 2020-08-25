@@ -3,8 +3,8 @@ exports.up = (knex) =>
 
 		table.increments('cd_publisher');
 
-		table.string('publisher', 40).notNullable();
-		table.string('publisher_logo', 50).notNullable();
+		table.string('publisher', 30).notNullable();
+		table.text('publisher_logo').notNullable();
 	});
 
 exports.down = (knex) => knex.schema.dropTable('tb_publisher');

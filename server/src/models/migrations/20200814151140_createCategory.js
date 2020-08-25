@@ -3,8 +3,8 @@ exports.up = (knex) =>
 
 		table.increments('cd_category');
 
-		table.string('category', 60).notNullable();
-		table.text('category_description', 'longtext').notNullable();
+		table.string('category', 30).notNullable();
+		table.text('category_description').notNullable();
 	});
 
 exports.down = (knex) => knex.schema.dropTable('cd_category');

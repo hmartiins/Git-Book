@@ -4,7 +4,7 @@ exports.up = (knex) =>
 		table.increments('cd_writer');
 
 		table.string('writer', 60).notNullable();
-		table.string('writer_photo', 45).notNullable();
+		table.text('writer_photo').notNullable();
 	});
 
 exports.down = (knex) => knex.schema.dropTable('tb_writer');

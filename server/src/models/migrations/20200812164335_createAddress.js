@@ -3,9 +3,12 @@ exports.up = (knex) =>
 
 		table.increments('cd_address');
 
-		table.string('cep', 20).notNullable();
-		table.string('address', 100).notNullable();
-		table.string('comp_address', 10).notNullable();
+		table.string('cep', 8).notNullable();
+		table.string('street').notNullable();
+		table.string('house_number', 5).notNullable();
+		table.string('district', 50).notNullable();
+		table.string('comp_address', 5).notNullable();
+
 		table.integer('id_user').unsigned();
 		table.foreign('id_user').references('cd_user').inTable('tb_user');
 	});

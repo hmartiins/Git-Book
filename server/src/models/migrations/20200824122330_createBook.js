@@ -3,7 +3,7 @@ exports.up = (knex) =>
 
 		table.increments('cd_book');
 
-		table.string('name', 120).notNullable();
+		table.string('name').notNullable();
 		table.string('language', 30).notNullable();
 		table.string('isbn', 13).notNullable();
 		table.date('publishment').notNullable();
