@@ -4,11 +4,11 @@ const knex = require('../models/connection');
 const config = require('../config/config');
 const emailService = require('../services/emailServices');
 
-async function checkField(colum, field) {
+async function checkField(column, field) {
   const fieldVerification = await knex('tb_user')
-    .where(colum, field)
+    .where(column, field)
     .first()
-    .select(colum)
+    .select(column)
 
   if (!fieldVerification) {
     return false;

@@ -1,31 +1,30 @@
 const knex = require('../models/connection');
-const config = require('../config/config');
 
-class AdressController {
+class AddressController {
   async create(request, response) {
     const {
       cep,
-      adress,
-      comp_adress,
+      address,
+      comp_address,
       id_user
     } = request.body;
 
-    const userAdress = {
+    const userAddress = {
       cep,
-      adress,
-      comp_adress,
+      address,
+      comp_address,
       id_user
     }
 
     const trx = await knex.transaction();
 
     try {
-      await trx('tb_adress').insert(userAdress);
+      await trx('tb_address').insert(userAddress);
       await trx.commit();
 
       return response.status(201).json({
-        succes: 'Adress registered successfully',
-        data: userAdress,
+        succes: 'Address registered successfully',
+        data: userAddress,
       });
     } catch (err) {
       console.log(err);
@@ -34,4 +33,4 @@ class AdressController {
   }
 }
 
-module.exports = AdressController;
+module.exports = AddressController;

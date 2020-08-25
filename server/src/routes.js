@@ -3,16 +3,16 @@ const { Router } = require('express');
 const routes = Router();
 
 const UserController = require('./controllers/UserController');
-const AdressController = require('./controllers/AdressController');
+const AddressController = require('./controllers/AddressController');
 
 const userController = new UserController();
-const adressController = new AdressController();
+const addressController = new AddressController();
 
 routes.post('/user', userController.create);
 routes.get('/user/:cd_user', userController.show);
 routes.delete('/user/:cd_user', userController.delete);
 routes.put('/user/:cd_user', userController.update);
 
-routes.post('/adress', adressController.create);
+routes.post('/address', addressController.create);
 
 module.exports = routes;
