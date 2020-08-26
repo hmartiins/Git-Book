@@ -19,6 +19,7 @@ class PublisherController {
       const matches = rawDataImage.match(/^data:([A-Za-z-+\/]+);base64,(.+)$/);
       const type = matches[1];
       const buffer = new Buffer.from(matches[2], 'base64');
+      let publisher_logo = 'https://gitbook.blob.core.windows.net/publisher-logo/' + fileName;
 
       await blobService.createBlockBlobFromText('publisher-logo', fileName, buffer, {
         contentType: type
@@ -28,9 +29,7 @@ class PublisherController {
         }
       });
 
-      console.log(publisher, fileName);
-
-      await trx('tb_publisher').insert(publisher, fileName);
+      await trx('tb_publisher').insert(publisher, publisher_logo);
       await trx.commit();
 
       return response.status(201).json({
