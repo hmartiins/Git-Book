@@ -19,6 +19,7 @@
   "homepage": "https://github.com/hmartiins/Git-Book#readme",
   "dependencies": {
     "@sendgrid/mail": "^7.2.3",
+    "azure-storage": "^2.10.3",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
