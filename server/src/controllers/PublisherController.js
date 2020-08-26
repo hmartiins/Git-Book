@@ -18,7 +18,7 @@ class PublisherController {
       const rawDataImage = request.body.image;
       const matches = rawDataImage.match(/^data:([A-Za-z-+\/]+);base64,(.+)$/);
       const type = matches[1];
-      const buffer = new Buffer.alloc(matches[2], 'base64');
+      const buffer = new Buffer.from(matches[2], 'base64');
 
       await blobService.createBlockBlobFromText('publisher-logo', fileName, buffer, {
         contentType: type
