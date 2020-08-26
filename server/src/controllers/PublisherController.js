@@ -29,7 +29,7 @@ class PublisherController {
         }
       });
 
-      await trx('tb_publisher').insert(publisher, publisher_logo);
+      await trx('tb_publisher').insert({ publisher, publisher_logo });
       await trx.commit();
 
       return response.status(201).json({
