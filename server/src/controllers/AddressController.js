@@ -4,17 +4,21 @@ class AddressController {
   async create(request, response) {
     const {
       cep,
-      address,
+      street,
+      house_number,
+      district,
       comp_address,
       id_user
     } = request.body;
 
     const userAddress = {
       cep,
-      address,
+      street,
+      house_number,
+      district,
       comp_address,
       id_user
-    }
+    };
 
     const trx = await knex.transaction();
 
@@ -30,6 +34,16 @@ class AddressController {
       console.log(err);
       response.status(400).send({ error: 'Failed to register' })
     }
+  }
+  async show(request, response) {
+    const { cd_user } = request.params;
+
+    const userAdress = await knex('tb_address')
+      .where('id_user', cd_user)
+      .first()
+      .select();
+
+    return response.json({ userAdress });
   }
 }
 

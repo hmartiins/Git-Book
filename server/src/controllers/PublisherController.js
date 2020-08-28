@@ -21,7 +21,7 @@ class PublisherController {
       const buffer = new Buffer.from(matches[2], 'base64');
       let publisher_logo = 'https://gitbook.blob.core.windows.net/publisher-logo/' + fileName;
 
-      await blobService.createBlockBlobFromText('publisher-logo', fileName, buffer, {
+      blobService.createBlockBlobFromText('publisher-logo', fileName, buffer, {
         contentType: type
       }, (err, result, response) => {
         if (err) {
