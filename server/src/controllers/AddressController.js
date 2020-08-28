@@ -32,7 +32,7 @@ class AddressController {
       });
     } catch (err) {
       console.log(err);
-      response.status(400).send({ error: 'Failed to register' })
+      response.status(400).send({ error: 'Failed to register' });
     }
   }
   async show(request, response) {
@@ -44,6 +44,32 @@ class AddressController {
       .select();
 
     return response.json({ userAdress });
+  }
+  async update(request, response) {
+    const { id_user } = request.params;
+
+    const {
+      cep,
+      street,
+      house_number,
+      district,
+      comp_address,
+    } = request.body;
+
+    try {
+      await knex('tb_address').update({
+        cep,
+        street,
+        house_number,
+        district,
+        comp_address,
+      }).where({ id_user });
+
+      return response.status(200).send({ success: 'Updated successfully' });
+    } catch (err) {
+      console.log(err);
+      response.status(400).send({ error: 'Failed to register' })
+    };
   }
 }
 

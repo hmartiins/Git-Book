@@ -17,6 +17,7 @@ routes.put('/user/:cd_user', userController.update);
 
 routes.post('/address', addressController.create);
 routes.get('/address/:cd_user', addressController.show);
+routes.put('/address/:id_user', addressController.update);
 
 routes.post('/publisher', publisherController.create);
 
