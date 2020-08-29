@@ -4,10 +4,13 @@ import styles from './styles.module.css';
 function Input(props) {
   const style = {
     width: props.width
-  }
+  };
+
+  const Iconxuxuxu = props.iconPrefix
   return (
     <div className={styles.inputGroup}>
-      <label for={props.name}>
+      <Iconxuxuxu />
+      <label htmlFor={props.name}>
         {!props.label ? null : props.label}
         {props.mandatory ? <span>*</span> : null}
       </label>

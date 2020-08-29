@@ -1,11 +1,16 @@
 import React from 'react';
-import {Input} from '../../components/Input/index'
+import {Input} from '../../components/Input/index';
+
+import { FiAirplay } from 'react-icons/fi';
+
+console.log(FiAirplay)
 
 export default function Login() {
   return (
     <>
       <Input
         name="name"
+        iconPrefix={FiAirplay}
         label="Seu Nome"
         mandatory={true}
         type="text"
