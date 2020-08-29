@@ -3,19 +3,7 @@ const md5 = require('md5');
 const knex = require('../models/connection');
 const config = require('../config/config');
 const emailService = require('../services/emailServices');
-
-async function checkField(column, field) {
-  const fieldVerification = await knex('tb_user')
-    .where(column, field)
-    .first()
-    .select(column)
-
-  if (!fieldVerification) {
-    return false;
-  };
-
-  return true;
-};
+const checkField = require('../utils/checkFields');
 
 class UserController {
   async create(request, response) {
