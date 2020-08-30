@@ -32,9 +32,13 @@ class UserController {
     const trx = await knex.transaction();
 
     const userEmailExisting = await checkField('email', email);
+    const userCpfExisting = await checkField('cpf', cpf);
+    const userRgExisting = await checkField('rg', rg);
 
-    if (userEmailExisting === true) {
-      return response.status(409).send({ error: 'E-mail already registered !' })
+    if (userEmailExisting === true ||
+      userCpfExisting === true ||
+      userRgExisting === true) {
+      return response.status(409).send({ error: 'Conflict between fields !' })
     }
 
     try {
