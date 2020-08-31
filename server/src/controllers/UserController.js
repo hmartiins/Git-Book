@@ -31,9 +31,9 @@ class UserController {
 
     const trx = await knex.transaction();
 
-    const userEmailExisting = await checkField('email', email);
-    const userCpfExisting = await checkField('cpf', cpf);
-    const userRgExisting = await checkField('rg', rg);
+    const userEmailExisting = await checkField('tb_user', 'email', email);
+    const userCpfExisting = await checkField('tb_user', 'cpf', cpf);
+    const userRgExisting = await checkField('tb_user', 'rg', rg);
 
     if (userEmailExisting === true ||
       userCpfExisting === true ||
@@ -65,7 +65,7 @@ class UserController {
   async show(request, response) {
     const { cd_user } = request.params;
 
-    let userVerification = await checkField('cd_user', cd_user);
+    const userVerification = await checkField('tb_user', 'cd_user', cd_user);
 
     if (userVerification === false) {
       return response.status(404).send({ success: 'User not found' })
@@ -83,7 +83,7 @@ class UserController {
     let userVerification;
 
     try {
-      userVerification = await checkField('cd_user', cd_user);
+      userVerification = await checkField('tb_user', 'cd_user', cd_user);
 
       if (userVerification === false) {
         return response.status(404).send({ success: 'User not found' })
@@ -113,7 +113,7 @@ class UserController {
     } = request.body;
 
     try {
-      userVerification = await checkField('cd_user', cd_user);
+      userVerification = await checkField('tb_user', 'cd_user', cd_user);
 
       if (userVerification === false) {
         return response.status(404).send({ success: 'User not found' });
