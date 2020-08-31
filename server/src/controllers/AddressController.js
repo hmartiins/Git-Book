@@ -45,6 +45,12 @@ class AddressController {
   async show(request, response) {
     const { id_user } = request.params;
 
+    const idUserExisting = await checkField('tb_user', cd_user, id_user);
+
+    if (idUserExisting === false) {
+      return response.status(404).send({ success: 'User not found' });
+    }
+
     const userAddress = await knex('tb_address')
       .where('id_user', id_user)
       .first()
@@ -54,6 +60,12 @@ class AddressController {
   }
   async update(request, response) {
     const { id_user } = request.params;
+
+    const idUserExisting = await checkField('tb_user', cd_user, id_user);
+
+    if (idUserExisting === false) {
+      return response.status(404).send({ success: 'User not found' });
+    }
 
     const {
       cep,
@@ -80,6 +92,12 @@ class AddressController {
   }
   async delete(request, response) {
     const { id_user } = request.params;
+
+    const idUserExisting = await checkField('tb_user', cd_user, id_user);
+
+    if (idUserExisting === false) {
+      return response.status(404).send({ success: 'User not found' });
+    }
 
     try {
       await knex('tb_address')
