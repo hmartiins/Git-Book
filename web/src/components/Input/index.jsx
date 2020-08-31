@@ -1,15 +1,21 @@
 import React from 'react'
 import styles from './styles.module.css';
 
+import * as FiIcons from 'react-icons/fi';
+
 function Input(props) {
   const style = {
     width: props.width
   };
 
-  const Iconxuxuxu = props.iconPrefix
+  const icon = props.iconPrefix;
+
+  console.log(icon);
+
+  const FiIcon = FiIcons[icon];
   return (
     <div className={styles.inputGroup}>
-      <Iconxuxuxu />
+      <FiIcon />
       <label htmlFor={props.name}>
         {!props.label ? null : props.label}
         {props.mandatory ? <span>*</span> : null}
@@ -24,4 +30,4 @@ function Input(props) {
   );
 }
 
-export {Input}
+export { Input }

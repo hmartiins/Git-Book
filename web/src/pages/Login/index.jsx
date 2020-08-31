@@ -1,23 +1,19 @@
 import React from 'react';
-import {Input} from '../../components/Input/index';
-
-import { FiAirplay } from 'react-icons/fi';
-
-console.log(FiAirplay)
+import { Input } from '../../components/Input/index';
 
 export default function Login() {
   return (
     <>
       <Input
         name="name"
-        iconPrefix={FiAirplay}
+        iconPrefix="FiAirplay"
         label="Seu Nome"
         mandatory={true}
         type="text"
         placeholder="Nome Completo"
         width="470px"
       />
-      <Input
+      {/* <Input
         name="email"
         label="E-mail"
         mandatory={true}
@@ -38,7 +34,7 @@ export default function Login() {
         mandatory={true}
         type="password"
         placeholder="confirme sua senha"
-      />
+      /> */}
 
     </>
   );
