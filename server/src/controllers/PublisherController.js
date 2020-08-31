@@ -45,6 +45,16 @@ class PublisherController {
   async show(request, response) {
     const { cd_publisher } = request.params;
 
+    const publisherVerification = await checkField(
+      'tb_publisher',
+      'cd_publisher',
+      cd_publisher
+    );
+
+    if (publisherVerification === false) {
+      return response.status(404).send({ success: 'Publisher not found' })
+    }
+
     const publisher = await knex('tb_publisher')
       .where('cd_publisher', cd_publisher)
       .first()
@@ -55,6 +65,16 @@ class PublisherController {
 
   async update(request, response) {
     const { cd_publisher } = request.params;
+
+    const publisherVerification = await checkField(
+      'tb_publisher',
+      'cd_publisher',
+      cd_publisher
+    );
+
+    if (publisherVerification === false) {
+      return response.status(404).send({ success: 'Publisher not found' })
+    }
 
     const {
       publisher,
@@ -75,6 +95,16 @@ class PublisherController {
   }
   async delete(request, response) {
     const { cd_publisher } = request.params;
+
+    const publisherVerification = await checkField(
+      'tb_publisher',
+      'cd_publisher',
+      cd_publisher
+    );
+
+    if (publisherVerification === false) {
+      return response.status(404).send({ success: 'Publisher not found' })
+    }
 
     try {
       await knex('tb_publisher')
