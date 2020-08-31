@@ -23,7 +23,7 @@ class AddressController {
 
     const trx = await knex.transaction();
 
-    const userVerification = await checkField('tb_user', 'cd_user', cd_user);
+    const userVerification = await checkField('tb_user', 'cd_user', id_user);
 
     if (userVerification === false) {
       return response.status(404).send({ success: 'User not found' })
@@ -43,14 +43,14 @@ class AddressController {
     }
   }
   async show(request, response) {
-    const { cd_user } = request.params;
+    const { id_user } = request.params;
 
-    const userAdress = await knex('tb_address')
-      .where('id_user', cd_user)
+    const userAddress = await knex('tb_address')
+      .where('id_user', id_user)
       .first()
       .select();
 
-    return response.json({ userAdress });
+    return response.json({ userAddress });
   }
   async update(request, response) {
     const { id_user } = request.params;
@@ -87,7 +87,7 @@ class AddressController {
         .delete()
 
       return response.sendStatus(200).send({
-        success: `successfully deleting the user with id ${id_user}`
+        success: `successfully deleting the user address with id ${id_user}`
       });
     } catch (err) {
       console.log(err);

@@ -16,7 +16,7 @@ routes.delete('/user/:cd_user', userController.delete);
 routes.put('/user/:cd_user', userController.update);
 
 routes.post('/address', addressController.create);
-routes.get('/address/:cd_user', addressController.show);
+routes.get('/address/:id_user', addressController.show);
 routes.delete('/address/:id_user', addressController.delete);
 routes.put('/address/:id_user', addressController.update);
 
