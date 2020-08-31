@@ -1,7 +1,7 @@
 const knex = require('../models/connection');
 
-async function checkField(column, field) {
-  const fieldVerification = await knex('tb_user')
+async function checkField(tb_name, column, field) {
+  const fieldVerification = await knex(tb_name)
     .where(column, field)
     .first()
     .select(column)
