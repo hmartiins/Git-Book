@@ -1,4 +1,5 @@
 const knex = require('../models/connection');
+const checkField = require('../utils/checkFields');
 
 class AddressController {
   async create(request, response) {
@@ -21,6 +22,12 @@ class AddressController {
     };
 
     const trx = await knex.transaction();
+
+    const userVerification = await checkField('tb_user', 'cd_user', cd_user);
+
+    if (userVerification === false) {
+      return response.status(404).send({ success: 'User not found' })
+    }
 
     try {
       await trx('tb_address').insert(userAddress);
