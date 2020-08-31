@@ -22,5 +22,6 @@ routes.put('/address/:id_user', addressController.update);
 
 routes.post('/publisher', publisherController.create);
 routes.get('/publisher/:cd_publisher', publisherController.show);
+routes.put('/publisher/:cd_publisher'), publisherController.update;
 
 module.exports = routes;

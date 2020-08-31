@@ -52,6 +52,27 @@ class PublisherController {
 
     return response.json({ publisher });
   }
+
+  async update(request, response) {
+    const { cd_publisher } = request.params;
+
+    const {
+      publisher,
+      publisher_logo
+    } = request.body;
+
+    try {
+      await knex('tb_publisher').update({
+        publisher,
+        publisher_logo // needs to check how to update in azure
+      }).where({ cd_publisher });
+
+      return response.status(200).send({ success: 'Updated successfully' });
+    } catch (err) {
+      console.log(err);
+      response.status(400).send({ error: 'Failed to register' })
+    };
+  }
 }
 
 module.exports = PublisherController;
