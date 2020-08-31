@@ -21,5 +21,6 @@ routes.delete('/address/:id_user', addressController.delete);
 routes.put('/address/:id_user', addressController.update);
 
 routes.post('/publisher', publisherController.create);
+routes.get('/publisher/:cd_publisher', publisherController.show);
 
 module.exports = routes;

@@ -42,6 +42,16 @@ class PublisherController {
     }
 
   }
+  async show(request, response) {
+    const { cd_publisher } = request.params;
+
+    const publisher = await knex('tb_publisher')
+      .where('cd_publisher', cd_publisher)
+      .first()
+      .select();
+
+    return response.json({ publisher });
+  }
 }
 
 module.exports = PublisherController;
