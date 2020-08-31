@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobile/components/button.dart';
 import 'package:mobile/pages/Login/login_screen.dart';
+import 'package:mobile/pages/Register/register_screen.dart';
 import 'package:mobile/pages/Welcome/components/background.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -37,7 +38,14 @@ class Body extends StatelessWidget {
           ),
           Button(
             textButton: 'CADASTRE-SE',
-            handlePressButton: () {},
+            handlePressButton: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) {
+                  return RegisterScreen();
+                }),
+              );
+            },
           )
         ],
       ),
