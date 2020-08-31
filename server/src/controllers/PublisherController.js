@@ -73,6 +73,23 @@ class PublisherController {
       response.status(400).send({ error: 'Failed to register' })
     };
   }
+  async delete(request, response) {
+    const { cd_publisher } = request.params;
+
+    try {
+      await knex('tb_publisher')
+        .where('cd_publisher', cd_publisher)
+        .delete()
+
+      return response.sendStatus(200).send({
+        success: `successfully deleting the publisher address with id ${cd_publisher}`
+      });
+    } catch (err) {
+      console.log(err);
+
+      return response.status(400).send({ error: 'Error when deleting the record' });
+    }
+  }
 }
 
 module.exports = PublisherController;
