@@ -5,6 +5,7 @@ import 'package:mobile/components/input_field.dart';
 import 'package:mobile/components/password_field.dart';
 import 'package:mobile/components/text_account_check.dart';
 import 'package:mobile/pages/Login/components/background.dart';
+import 'package:mobile/pages/Login/login_screen.dart';
 
 class Body extends StatelessWidget {
   const Body({
@@ -30,7 +31,7 @@ class Body extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: size.height * 0.06,
+            height: size.height * 0.04,
           ),
           SvgPicture.asset(
             "assets/img/bookLover.svg",
@@ -50,11 +51,24 @@ class Body extends StatelessWidget {
             onChanged: (vl) {},
           ),
           SizedBox(
-            height: size.height * 0.02,
+            height: size.height * 0.017,
           ),
           Button(
             textButton: "CONTINUAR",
             handlePressButton: () {},
+          ),
+          TextAccountCheck(
+            login: false,
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return LoginScreen();
+                  },
+                ),
+              );
+            },
           ),
         ],
       ),
