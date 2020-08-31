@@ -6,6 +6,7 @@ import 'package:mobile/components/password_field.dart';
 import 'package:mobile/components/text_account_check.dart';
 import 'package:mobile/constants.dart';
 import 'package:mobile/pages/Login/components/background.dart';
+import 'package:mobile/pages/Register/register_screen.dart';
 
 class Body extends StatelessWidget {
   const Body({
@@ -49,7 +50,19 @@ class Body extends StatelessWidget {
             textButton: "LOGIN",
             handlePressButton: () {},
           ),
-          TextAccountCheck()
+          TextAccountCheck(
+            login: true,
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return RegisterScreen();
+                  },
+                ),
+              );
+            },
+          )
         ],
       ),
     );
