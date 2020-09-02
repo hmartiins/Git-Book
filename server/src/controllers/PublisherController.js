@@ -1,5 +1,6 @@
 const knex = require('../models/connection');
 const azureCreate = require('../services/azureBlobServiceCreate');
+const checkField = require('../utils/checkFields');
 
 class PublisherController {
   async create(request, response) {
