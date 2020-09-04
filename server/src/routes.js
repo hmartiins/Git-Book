@@ -7,10 +7,12 @@ const auth = require('./services/authServices');
 const UserController = require('./controllers/UserController');
 const AddressController = require('./controllers/AddressController');
 const PublisherController = require('./controllers/PublisherController');
+const WriterController = require('./controllers/WriterController');
 
 const userController = new UserController();
 const addressController = new AddressController();
 const publisherController = new PublisherController();
+const writerController = new WriterController();
 
 routes.post('/user', userController.create);
 routes.get('/user/:cd_user', userController.show);
@@ -26,5 +28,7 @@ routes.post('/publisher', publisherController.create);
 routes.get('/publisher/:cd_publisher', publisherController.show);
 routes.delete('/publisher/:cd_publisher', publisherController.delete);
 routes.put('/publisher/:cd_publisher', publisherController.update);
+
+routes.post('/writer', writerController.create);
 
 module.exports = routes;
