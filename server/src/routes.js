@@ -30,5 +30,8 @@ routes.delete('/publisher/:cd_publisher', publisherController.delete);
 routes.put('/publisher/:cd_publisher', publisherController.update);
 
 routes.post('/writer', writerController.create);
+routes.get('/writer/:cd_writer', writerController.show);
+routes.delete('/writer/:cd_writer', writerController.delete);
+routes.put('/writer/:cd_writer', writerController.update);
 
 module.exports = routes;
