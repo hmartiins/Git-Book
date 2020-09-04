@@ -2,6 +2,8 @@ const { Router } = require('express');
 
 const routes = Router();
 
+const auth = require('./services/authServices');
+
 const UserController = require('./controllers/UserController');
 const AddressController = require('./controllers/AddressController');
 const PublisherController = require('./controllers/PublisherController');
@@ -20,7 +22,7 @@ routes.get('/address/:id_user', addressController.show);
 routes.delete('/address/:id_user', addressController.delete);
 routes.put('/address/:id_user', addressController.update);
 
-routes.post('/publisher', publisherController.create);
+routes.post('/publisher', auth.authorize, publisherController.create);
 routes.get('/publisher/:cd_publisher', publisherController.show);
 routes.delete('/publisher/:cd_publisher', publisherController.delete);
 routes.put('/publisher/:cd_publisher', publisherController.update);
