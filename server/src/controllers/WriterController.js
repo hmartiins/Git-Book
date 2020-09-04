@@ -3,7 +3,7 @@ const azureCreate = require('../services/azureBlobServiceCreate');
 const checkField = require('../utils/checkFields');
 
 class WriterController {
-  async create() {
+  async create(request, response) {
     const { writer, writer_photo } = request.body;
 
     const trx = await knex.transaction();
@@ -23,6 +23,24 @@ class WriterController {
       response.status(400).send({ error: 'Failed to register' });
     }
   }
-}
+  async show(request, response) {
+    const { cd_writer } = request.parms;
+
+    const writerVerification = await checkField('tb_writer', 'cd_writer', cd_writer);
+
+    if (writerVerification === false) {
+      return response.status(404).send({ success: 'Writer not found' });
+    }
+
+    const writer = await knex('tb_writer')
+      .where('cd_writer', cd_writer)
+      .first()
+      .select('writer', 'writer_photo');
+
+    return response.json({ writer });
+  };
 
 module.exports = WriterController;
+
+
+
