@@ -43,5 +43,6 @@ routes.post('/book', bookController.create);
 routes.post('/category', categoryController.create);
 routes.get('/category/:cd_category', categoryController.show);
 routes.get('/category', categoryController.index);
+routes.delete('/category/:cd_category', categoryController.delete);
 
 module.exports = routes;

@@ -52,6 +52,30 @@ class CategoryController {
 
     return response.status(200).json(category);
   }
+
+  async delete(request, response) {
+    const { cd_category } = request.params;
+
+    try {
+      const categoryVerification = await checkField('tb_category', 'cd_category', cd_category);
+
+      if (categoryVerification === false) {
+        return response.status(404).send({ success: 'Category not found' });
+      }
+
+      await knex('tb_category').where('cd_category', cd_category).delete();
+
+      return response.status(200).json({
+        succes: `successfully deleting the category with id ${cd_category}`,
+      });
+    } catch (err) {
+      console.log(err);
+      response.status(400).send({
+        error: 'Failed to delete',
+        message: err.sqlMessage,
+      });
+    }
+  }
 }
 
 module.exports = CategoryController;
