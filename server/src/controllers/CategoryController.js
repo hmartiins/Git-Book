@@ -1,4 +1,5 @@
 const knex = require('../models/connection');
+const checkField = require('../utils/checkFields');
 
 class CategoryController {
   async create(request, response) {
@@ -33,6 +34,23 @@ class CategoryController {
       const categories = await knex('tb_category').select('*');
       return response.status(200).json(categories);
     } catch (err) {}
+  }
+
+  async show(request, response) {
+    const { cd_category } = request.params;
+
+    const categoryVerification = await checkField('tb_category', 'cd_category', cd_category);
+
+    if (categoryVerification === false) {
+      return response.status(404).send({ success: 'Category not found' });
+    }
+
+    const category = await knex('tb_category')
+      .where('cd_category', cd_category)
+      .select('*')
+      .first();
+
+    return response.status(200).json(category);
   }
 }
 
