@@ -3,8 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mobile/components/button.dart';
 import 'package:mobile/components/input_field.dart';
 import 'package:mobile/components/text_account_check.dart';
-import 'package:mobile/pages/FinishRegister/finish_register_screen.dart';
-import 'package:mobile/pages/Login/components/background.dart';
+import 'package:mobile/pages/FinishRegister/components/background.dart';
 import 'package:mobile/pages/Login/login_screen.dart';
 
 class Body extends StatelessWidget {
@@ -20,10 +19,10 @@ class Body extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           SizedBox(
-            height: size.height * 0.02,
+            height: size.height * 0.03,
           ),
           Text(
-            "CADASTRO",
+            "FINALIZAR CADASTRO",
             style: TextStyle(
               fontWeight: FontWeight.bold,
               color: Colors.white,
@@ -37,10 +36,18 @@ class Body extends StatelessWidget {
             "assets/img/finishChek.svg",
             height: size.height * 0.3,
           ),
+          SizedBox(
+            height: size.height * 0.03,
+          ),
           InputField(
-            hintText: "Lorem",
+            hintText: "Telefone",
             onChanged: (value) {},
-            icon: Icons.face,
+            icon: Icons.phone,
+          ),
+          InputField(
+            hintText: "Aniversário",
+            onChanged: (value) {},
+            icon: Icons.cake,
           ),
           SizedBox(
             height: size.height * 0.017,
@@ -52,7 +59,7 @@ class Body extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return FinishRegisterScreen();
+                    return LoginScreen();
                   },
                 ),
               );
