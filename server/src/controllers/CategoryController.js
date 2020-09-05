@@ -27,6 +27,13 @@ class CategoryController {
       });
     }
   }
+
+  async index(request, response) {
+    try {
+      const categories = await knex('tb_category').select('*');
+      return response.status(200).json(categories);
+    } catch (err) {}
+  }
 }
 
 module.exports = CategoryController;

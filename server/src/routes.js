@@ -41,5 +41,6 @@ routes.put('/writer/:cd_writer', writerController.update);
 routes.post('/book', bookController.create);
 
 routes.post('/category', categoryController.create);
+routes.get('/category', categoryController.index);
 
 module.exports = routes;
