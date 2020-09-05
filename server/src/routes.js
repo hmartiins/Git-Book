@@ -9,12 +9,14 @@ const AddressController = require('./controllers/AddressController');
 const PublisherController = require('./controllers/PublisherController');
 const WriterController = require('./controllers/WriterController');
 const BookController = require('./controllers/BookController');
+const CategoryController = require('./controllers/CategoryController');
 
 const userController = new UserController();
 const addressController = new AddressController();
 const publisherController = new PublisherController();
 const writerController = new WriterController();
 const bookController = new BookController();
+const categoryController = new CategoryController();
 
 routes.post('/user', userController.create);
 routes.get('/user/:cd_user', userController.show);
@@ -37,5 +39,7 @@ routes.delete('/writer/:cd_writer', writerController.delete);
 routes.put('/writer/:cd_writer', writerController.update);
 
 routes.post('/book', bookController.create);
+
+routes.post('/category', categoryController.create);
 
 module.exports = routes;
