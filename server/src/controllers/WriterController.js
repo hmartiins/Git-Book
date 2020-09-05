@@ -16,7 +16,7 @@ class WriterController {
 
       return response.status(201).json({
         succes: 'Registered successfully',
-        data: writer_photo, writerPhoto,
+        data: writer, writerPhoto,
       });
     } catch (err) {
       console.log(err);
@@ -67,7 +67,7 @@ class WriterController {
       return response.status(400).send({ error: 'Error when deleting the record' });
     }
   }
-  async update(response, response) {
+  async update(request, response) {
     const { cd_writer } = request.parms;
 
     const {
