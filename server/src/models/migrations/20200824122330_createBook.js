@@ -5,7 +5,7 @@ exports.up = (knex) =>
 
 		table.string('name').notNullable();
 		table.string('language', 30).notNullable();
-		table.string('isbn', 13).notNullable();
+		table.string('isbn', 13).notNullable().unique();
 		table.date('publishment').notNullable();
 		table.decimal('height').notNullable();
 		table.decimal('width').notNullable();
