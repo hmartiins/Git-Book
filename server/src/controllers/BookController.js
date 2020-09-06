@@ -73,6 +73,19 @@ class BookController {
       response.status(400).send({ error: 'Failed to register' });
     }
   }
+  async show(request, response) {
+    const { cd_book } = request.params;
+
+    const bookVerification = await checkField('tb_book', 'cd_book', cd_book);
+
+    if (bookVerification === false) {
+      return response.status(404).send({ success: 'book not found' });
+    }
+
+    const book = await knex('tb_book').where('cd_book', cd_book).first().select();
+
+    return response.json({ book });
+  }
 }
 
 module.exports = BookController;

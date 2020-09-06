@@ -39,6 +39,7 @@ routes.delete('/writer/:cd_writer', writerController.delete);
 routes.put('/writer/:cd_writer', writerController.update);
 
 routes.post('/book', bookController.create);
+routes.get('/book/:cd_book', bookController.show);
 
 routes.post('/category', categoryController.create);
 routes.get('/category/:cd_category', categoryController.show);
