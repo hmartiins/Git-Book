@@ -166,6 +166,15 @@ class BookController {
       response.status(400).send({ error: 'Failed to update' });
     }
   }
+  async showBookByPages(request, response) {
+    const { pages } = request.params;
+
+    const book = await knex('tb_book')
+      .where('pages', pages)
+      .select();
+
+    return response.json({ book });
+  }
 }
 
 module.exports = BookController;

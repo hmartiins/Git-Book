@@ -43,6 +43,7 @@ routes.get('/book/:cd_book', bookController.show);
 routes.delete('/book/:cd_book', bookController.delete);
 routes.get('/book', bookController.index);
 routes.put('/book/:cd_book', bookController.update);
+routes.get('/book/showByPages/:pages', bookController.showBookByPages);
 
 routes.post('/category', categoryController.create);
 routes.get('/category/:cd_category', categoryController.show);
