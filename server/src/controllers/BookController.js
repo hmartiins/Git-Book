@@ -103,7 +103,16 @@ class BookController {
       });
     } catch (err) {
       console.log(err);
+      return response.status(400).send({ error: 'error when deleting the record' });
+    }
+  }
+  async index(request, response) {
+    try {
+      const books = await knex('tb_book').select('*');
 
+      return response.status(200).json(books);
+    } catch (err) {
+      console.log(err);
       return response.status(400).send({ error: 'error when deleting the record' });
     }
   }
