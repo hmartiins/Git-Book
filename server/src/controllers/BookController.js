@@ -173,6 +173,12 @@ class BookController {
       .where('pages', pages)
       .select();
 
+    if ((JSON.stringify(book) === '[]') === true) {
+      response.status(404).send({
+        warning: 'No book found with this number of pages'
+      });
+    }
+
     return response.json({ book });
   }
 }
