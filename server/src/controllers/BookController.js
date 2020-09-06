@@ -116,6 +116,56 @@ class BookController {
       return response.status(400).send({ error: 'error when deleting the record' });
     }
   }
+  async update(request, response) {
+    const { cd_book } = request.params;
+
+    const {
+      name,
+      language,
+      isbn,
+      publishment,
+      height,
+      width,
+      weight,
+      pages,
+      amount,
+      value,
+      id_publisher,
+      id_writer
+    } = request.body;
+
+    const book = {
+      name,
+      language,
+      isbn,
+      publishment,
+      height,
+      width,
+      weight,
+      pages,
+      amount,
+      value,
+      id_publisher,
+      id_writer
+    };
+
+    try {
+      const bookVerification = await checkField('tb_book', 'cd_book', cd_book);
+
+      if (bookVerification === false) {
+        return response.status(404).send({ success: 'book not found' });
+      }
+
+      await knex('tb_book')
+        .update(book)
+        .where({ cd_book });
+
+      return response.status(200).send({ success: 'Updated successfully' });
+    } catch (err) {
+      console.log(err);
+      response.status(400).send({ error: 'Failed to update' });
+    }
+  }
 }
 
 module.exports = BookController;
