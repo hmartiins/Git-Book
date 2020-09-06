@@ -1,5 +1,6 @@
 const knex = require('../models/connection');
 const azureCreate = require('../services/azureBlobServiceCreate');
+const checkField = require('../utils/checkFields');
 
 class PublisherController {
   async create(request, response) {
@@ -66,9 +67,11 @@ class PublisherController {
     } = request.body;
 
     try {
+      const publisherLogo = azureCreate('publisher-logo', publisher_logo);
+
       await knex('tb_publisher').update({
         publisher,
-        publisher_logo // needs to check how to update in azure
+        publisher_logo: publisherLogo
       }).where({ cd_publisher });
 
       return response.status(200).send({ success: 'Updated successfully' });
