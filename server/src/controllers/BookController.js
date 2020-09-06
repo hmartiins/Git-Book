@@ -55,7 +55,7 @@ class BookController {
     );
 
     if (isbnVerification === true) {
-      return response.status(409).send({ success: 'IBSN duplicated' });
+      return response.status(409).send({ success: 'ISBN duplicated' });
     }
 
     const trx = await knex.transaction();
