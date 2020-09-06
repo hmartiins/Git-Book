@@ -79,12 +79,33 @@ class BookController {
     const bookVerification = await checkField('tb_book', 'cd_book', cd_book);
 
     if (bookVerification === false) {
-      return response.status(404).send({ success: 'book not found' });
+      return response.status(404).send({ warning: 'book not found' });
     }
 
     const book = await knex('tb_book').where('cd_book', cd_book).first().select();
 
     return response.json({ book });
+  }
+  async delete(request, response) {
+    const { cd_book } = request.params;
+
+    try {
+      const bookVerification = await checkField('tb_book', 'cd_book', cd_book);
+
+      if (bookVerification === false) {
+        return response.status(404).send({ warning: 'book not found' });
+      }
+
+      await knex('tb_book').where('cd_book', cd_book).delete();
+
+      return response.sendStatus(200).send({
+        success: `successfully deleting the book with id ${cd_book}`,
+      });
+    } catch (err) {
+      console.log(err);
+
+      return response.status(400).send({ error: 'error when deleting the record' });
+    }
   }
 }
 
