@@ -7,15 +7,17 @@
 }
 
 .inputGroup label {
-  font-weight: 600;
-  font-size: 24px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
   color: #f6f6f6;
   margin-bottom: 14px;
 }
 
 .inputGroup label span {
-  font-weight: bold;
-  font-size: 26px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
   margin-left: 3px;
   color: #c93838;
 }
@@ -26,17 +28,14 @@
   border-radius: 8px;
   border: none;
   font-size: 18px;
-  font-weight: lighter;
-  color: #c1baba;
+  font-weight: 500;
+  color: #868181;
   outline-style: none;
   transition: 0.7s;
+  transition-timing-function: linear;
 }
 
 .inputGroup input:focus {
   box-shadow: 0 0 8px #18a851;
-  color: #858585;
-}
-
-.inputGroup + .inputGroup {
-  margin-top: 20px;
+  color: #4b4a4a;
 }

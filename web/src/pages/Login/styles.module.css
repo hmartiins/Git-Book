@@ -1,0 +1,14 @@
+.inputGroup {
+  display: flex;
+  align-items: center;
+}
+.inputGroup > :last-child {
+  margin-left: 30px;
+}
+.inputGroup > :only-child {
+  margin-left: 0;
+}
+
+.inputGroup + .inputGroup {
+  margin-top: 20px;
+}
