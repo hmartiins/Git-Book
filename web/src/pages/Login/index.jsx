@@ -1,12 +1,16 @@
 import React from 'react';
 import { Input } from '../../components/Input/index';
 
+import logo from '../../assets/logo.svg'
 import styles from './styles.module.css';
 
 export default function Login() {
   return (
-    <>
-      <div className={styles.inputGroup}>
+    <div className={styles.container}>
+      <header className={styles.header}>
+        <img src={logo} alt="logo" />
+      </header>
+      {/* <div className={styles.inputGroup}>
         <Input
           name="name"
           label="Seu Nome"
@@ -15,35 +19,13 @@ export default function Login() {
           placeholder="Nome Completo"
           width="470px"
         />
-        <Input
-          name="email"
           label="E-mail"
           mandatory={true}
           type="email"
           placeholder="seu@email.com"
           width="470px"
         />
-      </div>
-      <div className={styles.inputGroup}>
-        <Input
-          name="senha"
-          label="Senha"
-          mandatory={true}
-          type="password"
-          placeholder="pelo menos 6 caracteres"
-          width="470px"
-        />
-      </div>
-      <div className={styles.inputGroup}>
-        <Input
-          name="confirmsenha"
-          label="Insira a senha novamente"
-          mandatory={true}
-          type="password"
-          placeholder="confirme sua senha"
-          width="470px"
-        />
-      </div>
-    </>
+      </div> */}
+    </div>
   );
 }
