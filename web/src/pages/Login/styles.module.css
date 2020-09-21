@@ -30,3 +30,87 @@
 .inputGroup + .inputGroup {
   margin-top: 20px;
 }
+
+.main {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  margin-top: 30px;
+  height: 450px;
+}
+.main .containerImage img {
+  max-width: 595px;
+  border-radius: 28px;
+}
+.main form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 370px;
+  text-align: center;
+}
+.main form h1 {
+  color: #f6f6f6;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  text-align: center;
+}
+.main form p {
+  color: #f1f1f1;
+  font-weight: 400;
+  font-size: 18px;
+  font-family: 'Ubuntu', sans-serif;
+}
+.main form Input {
+  display: flex;
+  margin: 0 auto;
+}
+.main form .btnGroup {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 20px;
+}
+
+@media (max-width: 1050px) {
+  .main .containerImage img {
+    max-width: 500px;
+    border-radius: 28px;
+  }
+  .main form h1 {
+    color: #f6f6f6;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+  }
+  .main form p {
+    color: #f1f1f1;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+  }
+}
+@media (max-width: 900px) {
+  .main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'image' 'form';
+  }
+  .main .containerImage {
+    grid-area: image;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main form {
+    grid-area: form;
+    width: 368px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+  }
+}

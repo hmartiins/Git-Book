@@ -1,7 +1,10 @@
 import React from 'react';
 import { Input } from '../../components/Input/index';
+import { Button } from '../../components/Button/index';
 
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/logo.svg';
+import imageLogin from '../../assets/imageLogin.jpeg';
+
 import styles from './styles.module.css';
 
 export default function Login() {
@@ -10,22 +13,31 @@ export default function Login() {
       <header className={styles.header}>
         <img src={logo} alt="logo" />
       </header>
-      {/* <div className={styles.inputGroup}>
-        <Input
-          name="name"
-          label="Seu Nome"
-          mandatory={true}
-          type="text"
-          placeholder="Nome Completo"
-          width="470px"
-        />
-          label="E-mail"
-          mandatory={true}
-          type="email"
-          placeholder="seu@email.com"
-          width="470px"
-        />
-      </div> */}
+      <main className={styles.main}>
+        <div className={styles.containerImage}>
+          <img src={imageLogin} alt="" />
+        </div>
+        <form>
+          <h1>Um total de X clientes atendidos pela loja</h1>
+          <p>
+            A melhor e mais diversificada livraria, 100% online e confiável. A Git’s Books oferece
+            diversidade para você cliente, escolha entre ler online ou fisicamente...
+          </p>
+          <Input name="email" type="email" placeholder="Email" width="368px" />
+          <Input name="password" type="password" placeholder="Senha" width="368px" />
+          <div className={styles.btnGroup}>
+            <Button
+              text="Entrar"
+              type="submit"
+              width="175px"
+              height="50px"
+              styleButton="block"
+              fontSize="18px"
+            />
+            <Button text="Cadastrar-se" type="submit" width="175px" height="50px" fontSize="18px" />
+          </div>
+        </form>
+      </main>
     </div>
   );
 }
