@@ -1,0 +1,45 @@
+button.btnBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 24px;
+  box-shadow: 0 0 2px rgba(223, 223, 223, 0.308);
+
+  background: #18a851;
+  color: #f6f6f6;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 21px;
+
+  transition: 0.3s linear;
+}
+button.btnOutline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 175px;
+  border-radius: 24px;
+
+  background: transparent;
+  border: 1px solid #18a851;
+  color: #18a851;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 21px;
+
+  transition: 0.3s linear;
+}
+
+button.btnBlock:hover {
+  box-shadow: inset -1px 0 3px rgba(51, 51, 51, 0.863);
+}
+button.btnOutline:hover {
+  border: none;
+  box-shadow: 0 0 2px rgba(223, 223, 223, 0.308);
+  background: #18a851;
+  color: #f6f6f6;
+}
